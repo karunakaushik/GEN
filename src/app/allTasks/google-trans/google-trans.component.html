@@ -1,0 +1,139 @@
+<div>
+    <div class="container-fluid mainBox no-gutter gx-0">
+        <div class="row middle">
+            <div class="col-sm-8 d-flex g-0 btnBox">
+                <button class="txt"  >
+                    <i class="fa fa-font" style="font-size:16px;"></i>
+                    Text
+                </button>&nbsp;
+                <button class="doc">
+                    <i class="fa fa-file" style="font-size:16px;"></i>
+                    Documents
+                </button>&nbsp;
+                <button class="web">
+                    <i class="fa fa-globe" style="font-size:16px;"></i>
+                    Web Browser
+                </button>
+                
+            </div>
+        </div>
+    </div>
+    <div class="lowerbody">
+        <div class="inputBox">
+            <div class="row g-0">
+                <div class="col-md-6 langDetect">
+                    <nav>
+                        <div class="nav nav-tabs" role="tablist">
+                            <div class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-input"
+                                    type="button" role="tab" aria-selected="true">DETECT
+                                    LANGUAGE</button>
+                            </div>
+                            <div class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-input" type="button"
+                                    role="tab" aria-selected="false">ENGLISH</button>
+                            </div>
+                            <div class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-input" type="button"
+                                    role="tab" aria-selected="false">SPANISH</button>
+                            </div>
+                            <i id="down" class="fa fa-angle-down" (click)="clicked=true" *ngIf="!clicked"></i>
+                            <i id="down" class="fa fa-angle-up" (click)="clicked=false" *ngIf="clicked"></i>
+                        </div>
+                    </nav>
+                    <div class="tab-content col-md">
+                        <div class="tab-pane fade show active" id="nav-input" role="tabpanel">
+                            <textarea id="input-box" type="text" rows="2" style="
+                                width: 100%;
+                                padding: 25px;
+                                outline: none !important;
+                                font-size: 30px;  
+                                border: none;"></textarea>
+                            <div class="row d-flex align-items-baseline">
+                                <div class="col">
+                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                        title="Translate by voice">
+                                        <i id="mic" class="fa fa-microphone"
+                                            style="font-size:20px;color:gray; padding: 10px; cursor: pointer;"></i>
+                                    </span>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center"
+                                    style="margin-right: 10px;">
+                                    <div style="font-size: 10px;">0/5,000</div>
+                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                        title="Turn on virtual keyboard">
+                                        <i class="fa fa-keyboard-o"
+                                            style="font-size:15px;color:gray; padding: 10px; cursor: pointer;"></i>
+                                    </span>
+                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                        title="Select input tool">
+                                        <i class="fa fa-caret-down"
+                                            style="font-size:15px;color:gray; padding: 10px; cursor: pointer;"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 langDetect">
+                    <nav>
+                        <div class="nav nav-tabs d-flex align-items-center" role="tablist">
+                            <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                title="Swap languages(Ctrl+Shift+S)">
+                                <i id="exchange" class="fa fa-exchange d-none d-md-block"
+                                    style="font-size:15px;color:gray; margin-left: -20px; padding: 10px; cursor: pointer;"></i>
+                            </span>
+                            <div class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-input1"
+                                    type="button" role="tab" aria-selected="true">
+                                    ENGLISH</button>
+                            </div>
+                            <div class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-input1" type="button"
+                                    role="tab" aria-selected="false">SPANISH</button>
+                            </div>
+                            <div class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-input1" type="button"
+                                    role="tab" aria-selected="false">ARABIC</button>
+                            </div>
+                            <i id="down1" class="fa fa-angle-down" (click)="clicked=true" *ngIf="!clicked"></i>
+                            <i id="down1" class="fa fa-angle-up" (click)="clicked=false" *ngIf="clicked"></i>
+                        </div>
+                    </nav>
+                    <div class="tab-content col-md">
+                        <div class="tab-pane fade show active" id="nav-input1" role="tabpanel">
+                            <textarea type="text" placeholder="Translation" rows="2" style="
+                                width: 100%;
+                                padding: 25px;
+                                outline: none !important;
+                                font-size: 30px; 
+                                border: none;" ></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="fotterBox">
+        <div class="row">
+            <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+                <div class="hist rounded-circle">
+                    <i class="fa fa-history" style="font-size:30px;color:gray"></i>
+                </div>
+                History
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+                <div class="star rounded-circle v">
+                    <i class="fa fa-star" style="font-size:30px;color:gray"></i>
+                </div>
+                Saved
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+                <div class="contri rounded-circle">
+                    <i class="fa fa-users" style="font-size:30px;color:gray"></i>
+                </div>
+                Contribution
+            </div>
+        </div>
+    </footer>
+</div>

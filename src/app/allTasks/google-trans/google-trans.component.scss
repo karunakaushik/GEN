@@ -1,0 +1,160 @@
+$color_1: gray;
+$color_2: white;
+$color_3: blue;
+$font-family_1: Arial, Helvetica, sans-serif;
+$background-color_1: rgba(255, 255, 255, 1);
+$background-color_2: red;
+$background-color_3: rgb(245, 242, 242);
+$background-color_4: rgb(26, 115, 232, .12);
+$background-color_5: rgb(128, 128, 128, .09);
+$background-color_6: white;
+@mixin upperBtn(){
+	background-color: $background-color_3;
+	border: 1px solid rgba(0, 0, 0, .12);
+	color: $color_3;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-weight: 500;
+	height: fit-content;
+}
+@mixin lowerInfo(){
+	border: 1px solid rgba(0, 0, 0, .12);
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 15px;
+	cursor: pointer;
+}
+.mainBox {
+	background-color: $background-color_3;
+}
+.middle {
+	@extend .mainBox;
+	padding: 15px;
+	padding-right: 0;
+	width: 100%;
+	height: 120px;
+	border-top: 1px solid rgba(0, 0, 0, .12);
+	border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+.txt {
+	@include upperBtn();
+	&:hover {
+		background-color: $background-color_4;
+	}
+}
+.doc {
+	@include upperBtn();
+	&:hover {
+		background-color: $background-color_4;
+	}
+}
+.web {
+	@include upperBtn();
+	&:hover {
+		background-color: $background-color_4;
+	}
+}
+.btnBox {
+	margin: 10px 40px;
+	// justify-content: space-around;
+}
+.lowerbody{
+	padding: 5px;
+	.inputBox {
+		background: white;
+		margin: -40px 40px;
+		border-radius: 10px;
+		border: 1px solid rgba(0, 0, 0, .12);
+		box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
+		height: auto;
+	}
+}
+
+
+#nav-tab {
+	border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.tab-content {
+	border-inline-end: 1px solid rgba(0, 0, 0, .12);
+}
+#mic {
+	margin: 10px;
+	width: auto;
+
+	&:hover {
+		background-color: $background-color_5;
+		border-radius: 50%;
+	}
+}
+#down,
+#down1 {
+	font-size: 20px;
+	color: gray;
+	padding: 10px 13px;
+	cursor: pointer;
+	margin-left: 10px;
+
+	&:hover {
+		background-color: $background-color_5;
+		border-radius: 50%;
+	}
+}
+.fotterBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 150px;
+}
+.hist,
+.contri,
+.star {
+	@include lowerInfo();
+	
+}
+
+.nav-tabs {
+	.nav-item {
+		.nav-link {
+			background-color: $background-color_6;
+			color: $color_1;
+			font-size: 15px;
+			border: 0;
+			font-weight: 500;
+		}
+
+		.nav-link.active {
+			border-bottom: 2px solid blue;
+			color: $color_3;
+			border-radius: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 876px) and (orientation: landscape) {
+	.inputBox {
+		margin: 0;
+	}
+
+	#nav-contact-tab {
+		display: none;
+	}
+
+	#navTab {
+		font-size: 15px;
+	}
+
+	.btnBox {
+		margin: 0;
+		padding-left: 30px;
+	}
+
+	.middle {
+		margin-right: 0;
+	}
+
+}
