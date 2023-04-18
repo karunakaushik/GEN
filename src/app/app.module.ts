@@ -5,16 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleTransComponent } from './allTasks/google-trans/google-trans.component';
 import { HeaderComponent } from './allTasks/header/header.component';
+import { EditorComponent } from './editor/editor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     GoogleTransComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

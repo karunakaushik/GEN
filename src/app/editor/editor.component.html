@@ -1,0 +1,35 @@
+<div class="container-fluid d-flex flex-column justify-content-center">
+    <!-- <div class="row"> -->
+    <div class="col form-box d-flex flex-column">
+        <!-- <form> -->
+            <label class="editor-label">Editor: </label>
+            <textarea #userinput [formControl]="text" type="text" rows="2" placeholder="Write here...">
+            </textarea>
+        <!-- </form> -->
+    </div>
+    <div class="col-md btn-box">
+        <button type="submit" class="btn btn-primary" (click)="onUpperCase()">
+            UPPERCASE
+        </button>&nbsp;
+        <button class="btn btn-primary" (click)="onLowerCase()">
+            Lowercase
+        </button>&nbsp;
+        <button class="btn btn-primary " (click)="onDownload(filename)">
+            Download
+        </button>
+        <button class="btn btn-primary " (click)="onCapitalizedCase()">
+            Capitalized Case
+        </button>
+        <button class="btn btn-primary " (click)="removeExtraSpace()">
+            Remove Extra space
+        </button>
+        <button class="btn btn-primary " (click)="allClear()">
+            Clear
+        </button>
+        <button class="btn btn-primary " (click)="CopyToClipBoard(userinput)">
+            Copy to clipboard
+        </button>
+        
+    </div>
+    <!-- </div> -->
+</div>

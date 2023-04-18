@@ -25,6 +25,9 @@ $background-color_5: rgb(128, 128, 128, .09);
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	.nav-link{
+		padding: 15px;
+	}
 }
 .secondTopDiv {
 	display: flex;
